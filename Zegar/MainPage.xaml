@@ -3,16 +3,30 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="Zegar.MainPage"
             BackgroundColor="Gray"
-            BarBackgroundColor="LightGray">
+            BarBackgroundColor="LightGray"
+            BarTextColor="Gray">
 
     <ContentPage Title="Zegar">
-                
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="10:00:00" FontSize="50" TextColor="White"/>
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="04 March 2024" FontSize="20" TextColor="White"/>
+        </StackLayout>
     </ContentPage>
     <ContentPage Title="Alarm">
-        
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <TimePicker VerticalOptions="Center" TextColor="White" WidthRequest="250"/>
+            <Button CornerRadius="90" Text="Ustaw alarm" TextColor="Gray" WidthRequest="250"/>
+        </StackLayout>
     </ContentPage>
     <ContentPage Title="Minutnik">
-        
+        <StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Label Text="Ustaw czas (w sekundach):"/>
+                <Entry/>
+            </StackLayout>
+            <Label Text="00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+            <Button Text="Start" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
     </ContentPage>
 
 </TabbedPage>
