@@ -8,13 +8,13 @@
 
     <ContentPage Title="Zegar">
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="10:00:00" FontSize="50" TextColor="White"/>
-            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="04 March 2024" FontSize="20" TextColor="White"/>
+            <Label x:Name="lbl_clock" HorizontalOptions="Center" VerticalOptions="Center" FontSize="50" TextColor="White"/>
+            <Label x:Name="lbl_date" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" TextColor="White"/>
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Alarm">
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <TimePicker VerticalOptions="Center" TextColor="White" WidthRequest="250"/>
+            <TimePicker x:Name="timePicker_time" VerticalOptions="Center" TextColor="White" WidthRequest="250"/>
             <Button CornerRadius="90" Text="Ustaw alarm" TextColor="Gray" WidthRequest="250"/>
         </StackLayout>
     </ContentPage>
@@ -22,7 +22,7 @@
         <StackLayout>
             <StackLayout VerticalOptions="StartAndExpand">
                 <Label Text="Ustaw czas (w sekundach):"/>
-                <Entry/>
+                <Entry x:Name="entry_timerTime"/>
             </StackLayout>
             <Label Text="00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
             <Button Text="Start" VerticalOptions="EndAndExpand"/>
